@@ -1,4 +1,4 @@
-## 어서오세요!!!!! :D
+## 어서오지마세요!!!!! :D
 
 This is the site for me to post all the things that I learn from HGU(Handong Global University)!   
 이 사이트는 제가 한동대학교에서 배운 모든 것을 포스팅하는 사이트입니다!
