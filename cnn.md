@@ -61,4 +61,8 @@ CNN에서 중요한 또 다른 Layer가 바로 ReLU이다. ReLU란 Rectified Lin
 ![Sample Image 6](/images/sample6.png)
   
 ### CNN 구조 Overview
-
+![Sample Image 7](/images/sample7.png)
+  
+최종적으로 CNN의 구성을 보면 위와 같다. 먼저 입력의 이미지를 Convolution Layer와 ReLU Layer를 통해서 첫번째 Feature Map을 만들어낸다. 이 Feature Map의 Dimension을 줄이기 위해서 Pooling Layer로 줄인다. 그런 다음 Convolution Layer, ReLU Layer, Pooling Layer를 반복해서 작업을 하다가, 마지막에 Fully Connected Layer를 통해서 입력의 이미지가 어느 카테고리에 들어가는지 맞추는 Classification 작업을 한다.  
+  
+위의 CNN구조는 제일 기본적인 CNN의 구조이고, 지금은 더욱 더 다양한, 더 성능이 좋은 CNN구조가 많다. 이것에 대해선 나중에 추가 조사를 하도록 하겠다.
