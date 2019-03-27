@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 title: MinYoung Lee
-description: Description about MinYoung Lee's Page
+description: MinYoung Lee is an undergraduate student of Handong Global University(HGU). He is majoring Computer Science, and having big interest in Artificial Intelligence (Deep Learning, especially Convolutional Nerual Network), and Games.
+minimal_mistakes_skin: "dark"
+logo: /images/profile.jpg
