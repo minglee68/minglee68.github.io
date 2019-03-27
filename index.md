@@ -8,5 +8,5 @@ Try go to my Test page [Test](https://minglee68.github.io/test).
 ### 목차
 
 - [CNN (Convolutional Neural Network)](https://minglee68.github.io/cnn)
-- [Semantic Segmentation](https://minglee68.github.io/semantic)
+- [Semantic Segmentation](https://minglee68.github.io/segmentation)
 
