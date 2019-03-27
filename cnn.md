@@ -1,5 +1,5 @@
 ---
-CNN (Convolutional Neural Network)
+title: CNN (Convolutional Neural Network)
 ---
 
 # CNN (Convolutional Neural Network)
