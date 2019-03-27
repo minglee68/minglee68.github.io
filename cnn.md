@@ -38,6 +38,5 @@ Convolution이란 영상처리에서 자주 사용되는 방법인데, 커널(�
 위와 같이 한 번 적용을 시키고 끝내는 것이 아니라, 한 칸 오른쪽으로 옮겨서 똑같이 다시 실행한다. 이 작업을 끝까지 해서 최종적으로 하나의 Feature Map이 나오도록 한다.  
   
 ![Sample Image 3-3](/images/sample3_3.png)
-![Sample Image 3-4](/images/sample3.JPG)
   
 
