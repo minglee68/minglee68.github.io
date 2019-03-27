@@ -5,22 +5,10 @@ This is the site for me to post all the things that I learn from HGU(Handong Glo
 
 Try go to my Test page [Test](https://minglee68.github.io/test).
 
-### Markdown
+### 목차
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
+- [CNN (Convolutional Neural Network)](https://minglee68.github.io/cnn)
 - List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
