@@ -39,4 +39,26 @@ Convolution이란 영상처리에서 자주 사용되는 방법인데, 커널(�
   
 ![Sample Image 3-3](/images/sample3_3.png)
   
+### Pooling
+CNN에는 Convolution Layer 말고도 중요한 Layer가 몇 가지 더 있는데, 그 중 하나가 Pooling Layer이다. Pooling이란 Convolution과 비슷하게 커널의 개념을 가지고 하는 작업인데, 이미지의 크기를 줄이고 싶을 때에 주로 사용되는 작업으로, 영어로는 Downsampling 한다고 한다. 여기에선 대표적인 Max Pooling에 대해 설명하겠다.  
+  
+Max Pooling이란 입력으로 들어오는 Feature Map에서 중요하다고 생각되는 Feature만 뽑아내기 위한 Pooling이다. 먼저 어느 정도 크기의 구간에서 최대치를 찾는지 커널 사이즈로 지정을 하는데, 아래의 예시에서는 2x2로 지정을 했다 가정한다.  
+  
+![Sample Image 4](/images/sample4.png)
+  
+위에서 보면 처음 빨간색이 2x2의 커널에 들어가는 4개의 element들인데, 여기서 최대치인 6만 다음 Feature Map으로 보내주고, 나머지는 버린다.  
+  
+위와 같은 Max Pooling의 단점은 최대치의 Feature말고는 아예 쓸모없는 정보로 간주하고 버려버리는 데에 있다. 이 점을 극복하기 위해서 2x2의 모든 element를 다 더해버리는 Sum Pooling이나, 모든 element의 평균값을 구해서 Feature Map으로 보내는 Average Pooling 등등 여러가지 대안이 있다.
+  
+### ReLU
+CNN에서 중요한 또 다른 Layer가 바로 ReLU이다. ReLU란 Rectified Linear Unit의 줄임말인데, Neural Network에서 중요한 Non-Linearity를 보장해주는 역할을 한다. 작업 방법은 Input에서 모든 element들 중 0보다 작은 값들은 다 0으로 간주하고, 나머지는 본래 값 그대로 보내주는 작업을 한다.   
+  
+![Sample Image 5](/images/sample5.png)
+  
+### Fully Connected Layer
+마지막으로 CNN에서 Input에 대한 예측을 하는 Layer가 Fully Connected Layer이다. 본래 이미지는 행렬의 구조를 가지고 있는데, 이것을 한 줄의 배열과 같은 형식으로 바꿔서 백터로 간주한다. 그 백터를 가지고 이 Input이 어떤 카테고리에 가까운지 예측한다.  
+  
+![Sample Image 6](/images/sample6.png)
+  
+### CNN 구조 Overview
 
