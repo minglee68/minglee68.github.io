@@ -9,4 +9,5 @@ Try go to my Test page [Test](https://minglee68.github.io/test).
 
 - [CNN (Convolutional Neural Network)](https://minglee68.github.io/cnn)
 - [Semantic Segmentation](https://minglee68.github.io/segmentation)
+- [Transfer Learning](https://minglee68.github.io/transfer)
 
