@@ -34,4 +34,31 @@ Semantic Segmentation의 Classification과의 가장 큰 차이점은 각 픽셀
   
 ![Sample Image 11](/images/sample11.png)
   
+## 현재까지 나온 Semantic Segmentation 모델
+1. Fully Convolutional Network-Based Semantic Segmentation (FCN, 2014.11)
+FCN은 기본적으로 전통적인 CNN과 거의 유사하지만, 차이점이 있다면 위치정보를 아예 없애버리는 Fully Connected Layer를 버리고, Convolutional Layer와 Pooling Layer만 가지고 구성된 모델이라는 점이다. 하지만 여기에선 위치정보가 너무 많이 없어져서 아직 Upsampling의 개념을 잘 사용하지 못 했기 때문에, 결과적으로 나오는 출력이 원본의 영상에 비해 해상도가 매우 낮다는 단점이 있다.  
+  
+![Sample Image 12](/images/sample12.png)
+  
+2. U-Net (U-Net, 2015.5)
+U-Net은 Encoder - Decoder 형식으로 좋은 결과를 낸 초기의 모델이다. Encoding 과정을 Contracting Path라고 부르고, Decoding 과정을 Expanding Path라고 부르는데, U-Net의 특징은 Encoding 하는 과정에서 max pooling으로 잃어버리는 위치 정보들을 Decoding 과정에서 좀 더 회복시키기 위해서 Encoding 중에 나온 Feature를 복사해서 Decoding 중인 Feature에 붙인다. 또 적은 데이터로도 잘 돌리기 위해서 Data Augmentation을 한다. 단점은 느리고, 아직 위치가 정확하지 않아서 나오는 결과의 해상도가 입력에 비해 낮다는 점이다.  
+  
+![Sample Image 13](/images/sample13.png)
+  
+
+3. SegNet (SegNet, 2016.10)
+SegNet은 U-Net과 같이 Encoder - Decoder 형식으로 작성된 모델인데, 이번에는 Encoder의 Pooling Layer에서 Pooling을 한 위치정보를 저장을 해놓고 나중에 Decoder에서 Upsampling을 할 때에 그 정보를 사용한다. 기본적으로 FCN과 비슷하지만, Pooling Index를 저장함으로써 출력의 해상도가 많이 개선되었다.  
+  
+![Sample Image 14](/images/sample14.png)
+
+4. Global Convolutional Network (GCN, 2017.3)
+GCN은 거의 모든 모델들이 작은 커널을 쓰던 때에, Semantic Segmentation은 한 픽셀의 Classification을 위해선 주위의 정보가 더 중요하다고 생각하고, 그런 주위의 정보가 많으면 많을 수록 좋다고 생각해서 커널의 크기를 많이 키워서 작업을 한 모델이다. 이 모델에선 FCN의 개념 뿐만이 아니라, ResNet의 개념도 같이 사용이 되어서 Upsampling을 할 때에 도움이 되도록 했고, Boundary Refinement라는 Residual Structure를 더함으로써 이미지의 정보가 더 정확하고 의미가 있는 이미지 정보로 변환이 되도록 만들었다.  
+  
+![Sample Image 15](/images/sample15.JPG)
+  
+5. DeepLab (DeepLab v3+, 2018.8)
+DeepLab은 Astrous Spatial Pyramid Pooling을 이용해서 Pooling의 과정에서도 잃어버리는 정보를 최소화 시키도록 노력하고, Depthwise Separable Convolution을 이용해서 더 의미있는 Feature Map을 잘 뽑을 수 있도록 만들어낸 구글의 모델이다. Encoder부분에는 v1/2에서는 Google의 기존의 Inception모델을 사용했었고, 현재 Semantic Segmentation에서의 state of art model인 DeepLab v3+에서는 Xception모델을 사용하고 있다.  
+  
+![Sample Image 16](/images/sample16.png)
+  
 
